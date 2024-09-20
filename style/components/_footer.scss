@@ -1,0 +1,108 @@
+@use '../abstracts/' as a;
+@use '../layout/layout' as l;
+
+.footer{
+   @include l.section;
+   background-color: a.$gray-20;
+   padding-bottom: 50px;
+   &__container{
+      width: 1028px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__header{
+      margin-top: 0;
+      width: 486px;
+      p{
+         font-size: a.$b-reg-size;
+         line-height: a.$b-reg-height;
+         font-weight: a.$b-reg-weight;
+      }
+   }
+   &__title{
+      font-size: a.$h3-size;
+      line-height: a.$h3-height;
+      font-family: a.$header-font;
+   }
+   &__form{
+      input{
+         display: block;
+         width: 100%;
+         height: 38px;
+         outline: 0;
+         padding: 0;
+         font-size: a.$b-reg-size;
+         line-height: a.$b-reg-height;
+         font-weight: a.$b-reg-weight;
+         font-family: a.$body-font;
+      }
+   }
+   &-input__text{
+      border: none;
+      background-color: a.$white;
+      text-align: center;
+   }
+   &-input__submit{
+      margin-top: 10px;
+      border: none;
+      background: a.$primary-1;
+      color: a.$white;
+      cursor: pointer;
+      border: 2px solid a.$primary-1;
+      transition: .3s;
+   }
+   &-input__submit:hover{
+      background-color: white;
+      color: a.$primary-1;
+      border: 2px solid a.$primary-1;
+   }
+   &__sosmed{
+      margin-top: 35px;
+      font-size: 24px;
+      display: flex;
+      justify-content: space-between;
+      width: 120px;
+   }
+   &-sosmed__item{
+      i{
+         position: relative;
+         color: a.$gray-80;
+         transition: .5s;
+         bottom: 0;
+         // bottom 0 ini harus di tulis agar transisi bekerja
+      }
+      i:hover{
+         // jangan pake left top e.t.c karena tidak bisa digunakan dengan transition
+         bottom: 8px;
+      }
+   }
+
+   &__content{
+      display: flex;
+      width: 462px;
+      justify-content: space-between;
+      a p:hover{
+         color: a.$gray-80;
+      }
+   }
+   &__cs, &__source, &__legal{
+      margin-top: 16px;
+      p{
+         font-size: a.$b-lg-size;
+         line-height: a.$b-lg-height;
+         font-weight: a.$b-lg-weight;
+      }
+      a p{
+         font-size: a.$b-reg-size;
+         line-height: a.$b-reg-height;
+         font-weight: a.$b-reg-weight;
+         margin-bottom: 0;
+         margin-top: 8px;
+         color: a.$gray-60;
+      }
+   }
+   &__copyright{
+      text-align: center;
+      color: a.$gray-40;
+   }
+}

@@ -1,0 +1,89 @@
+@use '../components' as c;
+@use '../abstracts/' as a;
+@use '../layout/layout' as l;
+
+.our-products{
+   @include l.section;
+   &__container{
+      width: 1028px;
+      display: block;
+      margin-top: 83px;
+   }
+   &__header{
+      margin-top: 17px;
+      width: 340px;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   &__title{
+      display: inline;
+      font-family: a.$header-font;
+      font-size: a.$h2-size;
+      line-height: a.$h2-height;
+      margin-top: 0;
+   }
+   &__list{
+      margin-top: 55px;
+      margin-right: 0;
+      margin-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      column-gap: 19px;
+      row-gap: 41px;
+   }
+}
+.product{
+   &__card{
+      width: 190px;
+      height: 253px;
+      background-color: a.$gray-20;
+      display: flex;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      row-gap: 13px;
+   }
+   &__img{
+      width: 130px;
+      margin-right: auto;
+      margin-left: auto;
+      position: relative;
+   }
+   &__name{
+      font-size: a.$h6-size;
+      line-height: a.$h6-height;
+      font-family: a.$header-font;
+      margin-bottom: 26px;
+      margin-top: 0;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   &__price{
+      display: flex;
+   }
+   &__nominal{
+      font-size: a.$b-reg-size;
+      line-height: a.$b-reg-height;
+      font-weight: a.$b-reg-weight;
+      color: a.$primary-1;
+   }
+   &__rupiah{
+      font-size: a.$b-sm-alt-size;
+      font-weight: a.$b-sm-alt-weight;
+      line-height: a.$b-sm-alt-height;
+      height: 14px;
+      margin-top: auto;
+      margin-bottom: auto;
+   }
+   &__more{
+      font-size: a.$b-sm-alt-size;
+      font-weight: a.$b-sm-alt-weight;
+      line-height: a.$b-sm-alt-height;
+      color: a.$primary-1;
+      position: absolute;
+      i{
+         color: a.$primary-1;
+      }
+   }
+   
+}

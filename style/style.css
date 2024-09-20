@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Yeseva+One&display=swap");
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #ffffff;
+  color: #3a3a3a;
+  transition: 0.4s;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  z-index: 100;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.nav__brand {
+  height: 100%;
+  position: relative;
+}
+
+.nav {
+  height: 69px;
+  max-width: 1191px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__menu {
+  width: 60%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: 30px;
+  top: 0;
+}
+
+.nav__icon {
+  height: 100%;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 41px;
+  height: 32px;
+}
+
+.item__text--hover::before {
+  content: "";
+  position: absolute;
+  background: #3a3a3a;
+  bottom: 0px;
+  height: 3px;
+  width: 0px;
+  transition: all 0.5s ease;
+}
+
+.item__text--hover {
+  line-height: 30px;
+}
+
+.nav__item {
+  display: flex;
+  position: relative;
+  align-content: center;
+}
+.nav__item a,
+.nav__item label,
+.nav__item div {
+  color: #3a3a3a;
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+}
+.nav__item a i,
+.nav__item label i,
+.nav__item div i {
+  font-size: 32px;
+  color: #3a3a3a;
+  display: flex;
+}
+.nav__item .nav__search-bar {
+  position: absolute;
+  left: -260px;
+}
+.nav__item .nav__search-bar .nav__search-bar-input {
+  height: 32px;
+  position: relative;
+  bottom: 6px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 3px solid #3a3a3a;
+  background-color: transparent;
+  outline: none;
+  width: 0;
+  visibility: hidden;
+  margin-right: 12px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.nav__item .nav__search-bar .nav__search-bar-input--show {
+  width: 250px;
+  visibility: visible;
+}
+
+.item__text--hover:hover:before {
+  width: 100%;
+}
+
+.item__text--active::before {
+  content: "";
+  position: absolute;
+  background: #3A4520;
+  color: #3A4520;
+  bottom: 0px;
+  height: 3px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(37, 40, 38, 0.1);
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: #f8f7fa;
+  padding-bottom: 50px;
+}
+.footer__container {
+  width: 1028px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__header {
+  margin-top: 0;
+  width: 486px;
+}
+.footer__header p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.footer__title {
+  font-size: 28px;
+  line-height: 32px;
+  font-family: "Yeseva One", cursive;
+}
+.footer__form input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  outline: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+}
+.footer-input__text {
+  border: none;
+  background-color: #ffffff;
+  text-align: center;
+}
+.footer-input__submit {
+  margin-top: 10px;
+  border: none;
+  background: #3A4520;
+  color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #3A4520;
+  transition: 0.3s;
+}
+.footer-input__submit:hover {
+  background-color: white;
+  color: #3A4520;
+  border: 2px solid #3A4520;
+}
+.footer__sosmed {
+  margin-top: 35px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+.footer-sosmed__item i {
+  position: relative;
+  color: #3a3a3a;
+  transition: 0.5s;
+  bottom: 0;
+}
+.footer-sosmed__item i:hover {
+  bottom: 8px;
+}
+.footer__content {
+  display: flex;
+  width: 462px;
+  justify-content: space-between;
+}
+.footer__content a p:hover {
+  color: #3a3a3a;
+}
+.footer__cs, .footer__source, .footer__legal {
+  margin-top: 16px;
+}
+.footer__cs p, .footer__source p, .footer__legal p {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.footer__cs a p, .footer__source a p, .footer__legal a p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: #a6a6aa;
+}
+.footer__copyright {
+  text-align: center;
+  color: #cbcbd4;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.home__container {
+  height: 100%;
+  width: 1191px;
+  margin-top: 0;
+}
+.home__header {
+  width: 600px;
+  margin-top: 230px;
+  margin-left: 135px;
+}
+.home__header::before {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 3px;
+  position: relative;
+  background: #3a3a3a;
+  margin-left: -50px;
+}
+.home__title {
+  font-family: "Yeseva One", cursive;
+  font-size: 40px;
+  line-height: 40px;
+}
+.home__title2 {
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+  color: #3A4520;
+}
+.home__description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.home__social {
+  display: flex;
+  width: 24px;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-left: auto;
+  margin-right: 66px;
+  margin-top: -40px;
+}
+.home__social .social__item i {
+  font-size: 24px;
+  color: #3a3a3a;
+  transition: 0.5s;
+  position: relative;
+}
+.home__social .social__item i:hover {
+  margin-left: 8px;
+}
+.home__social::before {
+  display: block;
+  content: "";
+  position: relative;
+  width: 3px;
+  height: 60px;
+  background: #3a3a3a;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home__bg {
+  position: absolute;
+  top: 0;
+  margin-left: 440px;
+  z-index: -100;
+}
+.home__button {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 10px 16px;
+  background-color: #3A4520;
+  width: 140px;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.home__button i {
+  transition: 0.5s;
+  font-size: 24px;
+  color: #ffffff;
+}
+.home__button:hover i {
+  transform: translate(8px);
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.about-us__container {
+  width: 1028px;
+  display: flex;
+  column-gap: 124px;
+  margin-top: 71px;
+}
+.about-us__img {
+  margin-top: 90px;
+}
+.about-us__title {
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0;
+}
+.about-us__text {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.about-us__list {
+  padding-left: 0;
+}
+.about-us__item {
+  display: flex;
+}
+.about-us__item i {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 24px;
+  color: #3A4520;
+}
+.about-us__item p {
+  margin-left: 21px;
+}
+.about-us__button {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 10px 16px;
+  background-color: #3A4520;
+  width: 140px;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.about-us__button i {
+  transition: 0.5s;
+  font-size: 24px;
+  color: #ffffff;
+}
+.about-us__button:hover i {
+  transform: translate(8px);
+}
+
+.our-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.our-products__container {
+  width: 1028px;
+  display: block;
+  margin-top: 83px;
+}
+.our-products__header {
+  margin-top: 17px;
+  width: 340px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.our-products__title {
+  display: inline;
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0;
+}
+.our-products__list {
+  margin-top: 55px;
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  column-gap: 19px;
+  row-gap: 41px;
+}
+
+.product__card {
+  width: 190px;
+  height: 253px;
+  background-color: #f8f7fa;
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  row-gap: 13px;
+}
+.product__img {
+  width: 130px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+.product__name {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Yeseva One", cursive;
+  margin-bottom: 26px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.product__price {
+  display: flex;
+}
+.product__nominal {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3A4520;
+}
+.product__rupiah {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  height: 14px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.product__more {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #3A4520;
+  position: absolute;
+}
+.product__more i {
+  color: #3A4520;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.category__container {
+  width: 1028px;
+  display: block;
+  margin-top: 89px;
+}
+.category__header {
+  margin-top: 0;
+  width: 430px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 51px;
+}
+.category__title {
+  display: inline;
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0;
+}
+.category__cards {
+  margin-right: 0;
+  margin-left: 0;
+  display: grid;
+  gap: 19px 19px;
+}
+.category__cards .grid-item__1 {
+  grid-column: 1/span 2;
+  grid-row: 1;
+}
+.category__cards .grid-item__6 {
+  grid-column: 3/span 2;
+  grid-row: 2;
+}
+.category__cards div:nth-child(even) .category__card2 {
+  background-color: #fff9ed;
+}
+.category__card1 {
+  background-color: #EAEDF2;
+  height: 253px;
+  display: flex;
+}
+.category__card1 img {
+  display: inline-block;
+  margin-top: 37px;
+  margin-bottom: 36px;
+}
+.category__card1 .category__name {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Yeseva One", cursive;
+  color: #3a3a3a;
+  display: inline-block;
+  margin-top: 110px;
+  margin-left: 20px;
+}
+.category__card2 {
+  background-color: #F7EDEE;
+  height: 253px;
+}
+.category__card2 img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.category__card2 .category__name {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Yeseva One", cursive;
+  color: #3a3a3a;
+  margin-top: 0;
+  text-align: center;
+}
+.category__price {
+  display: flex;
+}
+.category__nominal {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3A4520;
+}
+.category__rupiah {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  height: 14px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.category__more {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #3A4520;
+  position: absolute;
+}
+.category__more i {
+  color: #3A4520;
+}
+
+.faqs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.faqs__container {
+  width: 1028px;
+  display: block;
+  margin-top: 59px;
+  background-color: #f8f7fa;
+}
+.faqs__header {
+  margin-top: 73px;
+  width: 430px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 46px;
+}
+.faqs__title {
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0;
+  text-align: center;
+}
+.faqs__accord {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.faqs__group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.accord__items {
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.accord__items:hover {
+  box-shadow: 0 2px 8px rgba(37, 40, 38, 0.15);
+}
+.accord__button {
+  display: flex;
+  align-items: center;
+  width: 464px;
+  height: 48px;
+  transition: 0.5s;
+  background-color: #ffffff;
+  color: #3a3a3a;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.accord__button i {
+  font-size: 24px;
+  margin-right: 16px;
+  margin-left: 8px;
+  transition: 0.3s;
+}
+.accord__text {
+  width: 464px;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}
+.accord__text p {
+  margin-left: 53px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+}
+.accord__content--open .accord__button, .accord__content--open .accord__text {
+  background-color: #3A4520;
+  color: #ffffff;
+}
+.accord__content--open .ri-add-line {
+  transform: rotate(45deg);
+}
+
+.faqs__reviews {
+  margin-top: 46px;
+}
+
+.reviews__header {
+  text-align: center;
+}
+.reviews__title {
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+}
+.reviews__content {
+  display: flex;
+  padding: 16px 24px;
+  margin: 46px 38px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+}
+.reviews__content i {
+  font-size: 32px;
+  cursor: pointer;
+}
+.reviews__persons {
+  display: flex;
+  align-items: center;
+}
+.reviews__persons img {
+  height: 110px;
+  margin-left: 24px;
+  margin-right: 32px;
+}
+.reviews__description {
+  margin-right: 24px;
+}
+.reviews__description .reviews__name {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.reviews__description .reviews__text {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 89px;
+}
+.contact-us__container {
+  width: 1028px;
+  margin-top: 89px;
+  display: grid;
+  column-gap: 74px;
+}
+.contact-us__header {
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 38px;
+  grid-column: 1/span 2;
+  grid-row: 1;
+}
+.contact-us__title {
+  display: inline;
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 0;
+}
+.contact-us__description {
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Yeseva One", cursive;
+}
+.contact-us__detail {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.contact-us__p1 {
+  color: #a6a6aa;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.contact-us__p1 i {
+  font-size: 24px;
+}
+.contact-us__p2 {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: -12px;
+  margin-bottom: 24px;
+}
+.contact-us__p2 i {
+  font-size: 24px;
+}
+.contact-us__form form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+.contact-us__form input, .contact-us__form textarea {
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 1px solid #3a3a3a;
+  outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+}
+.contact-us__form textarea {
+  resize: none;
+}
+.contact-us__form label {
+  color: #a6a6aa;
+  margin-top: 12px;
+}
+.contact-us__button {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+}
+.contact-us__button input {
+  border: 0;
+  border: 2px solid #3A4520;
+}
+.contact-us__submit {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 10px 16px;
+  background-color: #3A4520;
+  width: 140px;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.contact-us__submit i {
+  transition: 0.5s;
+  font-size: 24px;
+  color: #ffffff;
+}
+.contact-us__submit:hover i {
+  transform: translate(8px);
+}
+.contact-us__submit:hover {
+  background-color: white;
+  color: #3A4520;
+  border: 2px solid #3A4520;
+}
+
+#contact-us__maps {
+  position: relative;
+  width: 485px;
+  height: 580px;
+  z-index: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

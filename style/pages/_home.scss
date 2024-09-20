@@ -1,0 +1,82 @@
+@use '../components' as c;
+@use '../abstracts/' as a;
+@use '../layout/layout' as l;
+
+.home{
+   @include l.section;
+   &__container{
+      height: 100%;
+      width: 1191px;
+      margin-top: 0;
+   }
+   &__header{
+      width: 600px;
+      margin-top: 230px;
+      margin-left: 135px;
+      &::before{
+         display: block;
+         content: "";
+         width: 100px;
+         height: 3px;
+         position: relative;
+         background: a.$gray-80;
+         margin-left: -50px;
+      }
+   }
+   &__title{
+      font-family: a.$header-font;
+      font-size: a.$h1-size;
+      line-height: a.$h1-height;
+   }
+   &__title2{
+      font-family: a.$header-font;
+      font-size: a.$h2-size;
+      line-height: a.$h2-height;
+      color: a.$primary-1;
+   }
+   &__description{
+      font-size: a.$b-lg-size;
+      font-weight: a.$b-lg-weight;
+      line-height: a.$b-lg-height;
+   }
+   &__social{
+      display: flex;
+      width: 24px;
+      flex-direction: column;
+      row-gap: 15px;
+      margin-left: auto;
+      margin-right: 66px;
+      margin-top: -40px;
+      .social__item{
+         i{
+            font-size: 24px;
+            color: a.$gray-80;
+            transition: .5s;
+            position: relative;
+         }
+         i:hover{
+            margin-left: 8px;
+         }
+      }
+      &::before{
+         display: block;
+         content: "";
+         position: relative;
+         width: 3px;
+         height: 60px;
+         background: a.$gray-80;
+         @include l.container;
+      }
+   }
+   &__bg{
+      position: absolute;
+      top: 0;
+      margin-left: 440px;
+      z-index: -100;
+   }
+   &__button{
+      margin-top: 50px;
+      @include c.button;
+   }
+}
+

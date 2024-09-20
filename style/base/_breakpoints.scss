@@ -1,0 +1,25 @@
+// Breakpoints 
+$phone: 320px; 
+$tablet: 720px;
+$desktop: 1366px;
+
+body{
+   @mixin for-phone{
+      @media only screen and (min-width: $phone){
+         @content;
+      }
+   }
+   
+   @mixin for-tablet{
+      @media only screen and (min-width: $tablet){
+         @content;
+      }
+   }
+   
+   @mixin for-desktop{
+      @media only screen and (min-width: $desktop){
+         @content;
+      }
+   }
+}
+

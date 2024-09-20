@@ -1,0 +1,116 @@
+@use '../components' as c;
+@use '../abstracts/' as a;
+@use '../layout/layout' as l;
+
+.contact-us{
+   @include l.section;
+   margin-bottom: 89px;
+   &__container{
+      width: 1028px;
+      margin-top: 89px;
+      display: grid;
+      column-gap: 74px;
+   }
+   &__header{
+      margin-top: 0;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 38px;
+      grid-column: 1 / span 2;
+      grid-row: 1;
+   }
+   &__title{
+      display: inline;
+      font-family: a.$header-font;
+      font-size: a.$h2-size;
+      line-height: a.$h2-height;
+      margin-top: 0;
+   }
+   &__description{
+      margin-top: 0;
+      font-size: a.$h4-size;
+      line-height: a.$h4-height;
+      font-family: a.$header-font;
+   }
+   &__detail{
+      margin-top: 32px;
+      font-size: a.$b-reg-size;
+      line-height: a.$b-reg-height;
+      font-weight: a.$b-reg-weight;
+   }
+
+   &__p1{
+      color: a.$gray-60;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      i{
+         font-size: 24px;
+      }
+   }
+   &__p2{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: -12px;
+      margin-bottom: 24px;
+      i{
+         font-size: 24px;
+      }
+   }
+   &__form{
+      form{
+         display: flex;
+         flex-direction: column;
+         margin-top: 32px;
+      }
+      input, textarea{
+         border-right: 0;
+         border-top: 0;
+         border-left:0;
+         border-bottom: 1px solid a.$gray-80;
+         outline: none;
+         font-size: a.$b-reg-size;
+         line-height: a.$b-reg-height;
+         font-weight: a.$b-reg-weight;
+         font-family: a.$body-font;
+      }
+      textarea{
+         resize: none;
+      }
+      label{
+         color: a.$gray-60;
+         margin-top: 12px;
+      }
+   }
+   &__button{
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      input {
+         border: 0;
+         border: 2px solid a.$primary-1;
+      }
+   }
+   &__submit{
+      font-size: a.$b-reg-size;
+      line-height: a.$b-reg-height;
+      font-weight: a.$b-reg-weight;
+      font-family: a.$body-font;
+      cursor: pointer;
+      margin: 0;
+      @include c.button;
+      transition: .3s;
+   }
+   &__submit:hover{
+      background-color: white;
+      color: a.$primary-1;
+      border: 2px solid a.$primary-1;
+   }
+}
+#contact-us__maps{
+   position: relative;
+   width: 485px;
+   height: 580px;
+   z-index: 0; 
+}

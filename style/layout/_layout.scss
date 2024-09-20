@@ -1,0 +1,11 @@
+@mixin container{
+   margin-left: auto;
+   margin-right: auto;
+}
+
+@mixin section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+}

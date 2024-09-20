@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Yeseva+One&display=swap');
+
+// Typography
+$header-font: ('Yeseva One', cursive);
+$body-font: ('Josefin Sans', sans-serif);
+$h1-size: 40px;
+$h1-height: 40px;
+$h2-size: 32px;
+$h2-height: 36px; 
+$h3-size: 28px;
+$h3-height: 32px;
+$h4-size: 20px;
+$h4-height: 24px;
+$h5-size: 16px;
+$h5-height: 24px;
+$h6-size: 12px;
+$h6-height: 12px;
+
+$b-lg-size: 20px;
+$b-lg-height: 24px;
+$b-lg-weight: 400;
+$b-reg-size: 16px;
+$b-reg-height: 20px;
+$b-reg-weight: 400;
+$b-sm-size: 12px;
+$b-sm-height: 16px;
+$b-sm-weight: 300;
+$b-sm-alt-size: 12px;
+$b-sm-alt-height: 16px;
+$b-sm-alt-weight: 600;
+$b-label-size: 12px;
+$b-label-height: 12px;
+$b-label-weight: 600;
+$b-hint-size: 10px;
+$b-hint-height: 16px;
+$b-hint-weight: 500px;
+
+// Colors 
+// primer
+$primary-1: #3A4520;
+$primary-2: #ECF2E6;
+
+// accents
+$a-blue: #EAEDF2;
+$a-red: #F7EDEE;
+$a-yellow: #fff9ed;
+
+// user interface
+$gray-100: #000000;
+$gray-80: #3a3a3a;
+$gray-60: #a6a6aa;
+$gray-40: #cbcbd4;
+$gray-20: #f8f7fa;
+$white: #ffffff;
+
+// background
+// - white
+// - gray 20
+
+// text
+// - primary-1
+// - primary-2
+// - gray-100
+// - gray-80
+// - gray-60
+// - gray-40
+// - white
+
+// Icon sizing
+$i-sm: 12px;
+$i-md: 16px;
+$i-lg: 24px; 

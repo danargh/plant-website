@@ -1,0 +1,110 @@
+@use '../components' as c;
+@use '../abstracts/' as a;
+@use '../layout/layout' as l;
+
+.category{
+   @include l.section;
+   &__container{
+      width: 1028px;
+      display: block;
+      margin-top: 89px;
+   }
+   &__header{
+      margin-top: 0;
+      width: 430px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 51px;
+   }
+   &__title{
+      display: inline;
+      font-family: a.$header-font;
+      font-size: a.$h2-size;
+      line-height: a.$h2-height;
+      margin-top: 0;
+   }
+   
+   &__cards{
+      margin-right: 0;
+      margin-left: 0;
+      display: grid;
+      gap: 19px 19px;
+      .grid-item__1{
+         grid-column: 1 / span 2;
+         grid-row: 1;
+      }
+      .grid-item__6{
+         grid-column: 3 / span 2;
+         grid-row: 2;
+      }
+      div:nth-child(even) .category__card2{
+         background-color: a.$a-yellow;
+      }
+   }
+
+   &__card1{
+      background-color: a.$a-blue;
+      height: 253px;
+      display: flex;
+      img {
+         display: inline-block;
+         margin-top: 37px;
+         margin-bottom: 36px;
+      }
+      .category__name{
+         font-size: a.$h4-size;
+         line-height: a.$h4-height;
+         font-family: a.$header-font;
+         color: a.$gray-80;
+         display: inline-block;
+         margin-top: 110px;
+         margin-left: 20px;
+      }
+   }
+   &__card2{
+      background-color: a.$a-red;
+      height: 253px;
+      img{
+         display: block;
+         margin-right: auto;
+         margin-left: auto;
+      }
+      .category__name{
+         font-size: a.$h4-size;
+         line-height: a.$h4-height;
+         font-family: a.$header-font;
+         color: a.$gray-80;
+         margin-top: 0;
+         text-align: center;
+      }
+   }
+   
+   &__price{
+      display: flex;
+   }
+   &__nominal{
+      font-size: a.$b-reg-size;
+      line-height: a.$b-reg-height;
+      font-weight: a.$b-reg-weight;
+      color: a.$primary-1;
+   }
+   &__rupiah{
+      font-size: a.$b-sm-alt-size;
+      font-weight: a.$b-sm-alt-weight;
+      line-height: a.$b-sm-alt-height;
+      height: 14px;
+      margin-top: auto;
+      margin-bottom: auto;
+   }
+   &__more{
+      font-size: a.$b-sm-alt-size;
+      font-weight: a.$b-sm-alt-weight;
+      line-height: a.$b-sm-alt-height;
+      color: a.$primary-1;
+      position: absolute;
+      i{
+         color: a.$primary-1;
+      }
+   }
+   
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/' as a;
+
+@mixin button{
+   display: inline-flex;
+   align-items: center;
+   column-gap: .5rem;
+   padding: 10px 16px;
+   background-color: a.$primary-1;
+   width: 140px;
+   justify-content: center;
+   font-size: a.$b-lg-size;
+   font-weight: a.$b-lg-weight;
+   color: a.$white;
+   i{
+      transition: .5s;
+      font-size: 24px;
+      color: a.$white;
+   }
+   &:hover i{
+      transform: translate(8px);
+   }
+}
